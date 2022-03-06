@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-intercom" version="10.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="cordova-plugin-intercom" version="10.2.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Intercom</name>
     <author>Intercom</author>
     <license>MIT License</license>
@@ -9,7 +9,7 @@
 
     <engines>
       <engine name="cordova" version=">=9.0.0" />
-      <engine name="cordova-android" version=">=9.0.0" />
+      <engine name="cordova-android" version=">=10.0.0" />
       <engine name="cordova-ios" version=">=6.1.1" />
     </engines>
 
@@ -62,7 +62,7 @@
               <source url="https://cdn.cocoapods.org/"/>
           </config>
           <pods use-frameworks="true">
-              <pod name="Intercom" spec="~> 10.0.1" />
+              <pod name="Intercom" spec="~> 11.0.0" />
           </pods>
       </podspec>
     </platform>

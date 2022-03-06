@@ -70,7 +70,7 @@ public class IntercomBridge extends CordovaPlugin {
         try {
             Context context = cordova.getActivity().getApplicationContext();
 
-            CordovaHeaderInterceptor.setCordovaVersion(context, "10.0.0");
+            CordovaHeaderInterceptor.setCordovaVersion(context, "11.0.0");
 
             switch (IntercomPushManager.getInstalledModuleType()) {
                 case FCM: {
@@ -383,6 +383,13 @@ public class IntercomBridge extends CordovaPlugin {
             @Override void performAction(JSONArray args, CallbackContext callbackContext, CordovaInterface cordova) {
                 String articleId = args.optString(0);
                 Intercom.client().displayArticle(articleId);
+                callbackContext.success();
+            }
+        },
+        setBottomPadding {
+            @Override void performAction(JSONArray args, CallbackContext callbackContext, CordovaInterface cordova) {
+                int bottomPadding = args.optInt(0);
+                Intercom.client().setBottomPadding(bottomPadding);
                 callbackContext.success();
             }
         },
